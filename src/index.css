@@ -123,6 +123,7 @@ code {
   border: 10px solid #f9ae0e;
   color: #816835;
   border-radius: 40px;
+  cursor: default;
 }
 
 p::selection {
