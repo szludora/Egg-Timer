@@ -146,3 +146,29 @@ code {
 img::selection {
   background-color: transparent;
 }
+
+.eggs {
+  position: relative;
+}
+
+.eggSelector {
+  position: absolute;
+  width: 100px;
+  transform: translate(370px, -100px);
+}
+
+.first {
+  transform: translate(330px, 320px);
+}
+
+.second {
+  transform: translate(730px, 320px);
+}
+
+.third {
+  transform: translate(330px, 740px);
+}
+
+.fourth {
+  transform: translate(730px, 740px);
+}
