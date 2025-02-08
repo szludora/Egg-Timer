@@ -17,12 +17,14 @@ export default function SelectPage({ onGoToTimerPage }) {
           onClick={() => setSelectedEgg(0)}
         >
           <img src={egg1} alt="egg1" />
+          <p>Very soft-boiled</p>
         </Col>
         <Col
           className={`eggContainer ${selected === 1 ? "selected" : ""}`}
           onClick={() => setSelectedEgg(1)}
         >
           <img src={egg2} alt="egg2" />
+          <p>Soft-boiled</p>
         </Col>
       </Row>
       <Row className="eggRows">
@@ -31,12 +33,14 @@ export default function SelectPage({ onGoToTimerPage }) {
           onClick={() => setSelectedEgg(2)}
         >
           <img src={egg3} alt="egg3" />
+          <p>Medium-boiled</p>
         </Col>
         <Col
           className={`eggContainer ${selected === 3 ? "selected" : ""}`}
           onClick={() => setSelectedEgg(3)}
         >
           <img src={egg4} alt="egg4" />
+          <p>Hard-boiled</p>
         </Col>
       </Row>
       <Row>

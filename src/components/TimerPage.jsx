@@ -5,7 +5,7 @@ export default function TimerPage({ onGoSelectPage, selectedEgg }) {
   const getEggName = () => {
     switch (selectedEgg) {
       case 0:
-        return "Very soft-boiled ";
+        return "Very soft-boiled";
       case 1:
         return "Soft-boiled";
 

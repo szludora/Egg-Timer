@@ -58,6 +58,10 @@ code {
   border-radius: 20px;
   border: #f9ae0e solid 10px;
   cursor: pointer;
+  font-size: 30px;
+  text-align: center;
+  color: #816835;
+  font-weight: 700;
 }
 
 .eggContainer img {
