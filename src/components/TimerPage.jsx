@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import boilingEggs from "../assets/imgs/boilingEggs.gif";
+import home from "../assets/imgs/home.png";
 
 export default function TimerPage({ onGoSelectPage, selectedEgg }) {
   const getEggName = () => {
@@ -90,7 +91,7 @@ export default function TimerPage({ onGoSelectPage, selectedEgg }) {
       <Row>
         <Col className="alignCenter">
           <button className="homeBtn" onClick={onGoSelectPage}>
-            Home
+            <img src={home} alt="home" />
           </button>
         </Col>
       </Row>

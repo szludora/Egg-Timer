@@ -108,6 +108,10 @@ code {
   font-size: 40px;
   color: #ffbf00;
 }
+.homeBtn img {
+  width: 140px;
+  margin-bottom: 5px;
+}
 
 .remainingTime {
   width: 400px;
@@ -119,6 +123,11 @@ code {
   border: 10px solid #f9ae0e;
   color: #816835;
   border-radius: 40px;
+}
+
+p::selection {
+  user-select: none;
+  cursor: default;
 }
 
 .boilingEggs {
