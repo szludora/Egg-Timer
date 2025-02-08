@@ -34,21 +34,21 @@ code {
 }
 
 .chicken {
-  width: 240px;
+  width: 140px;
   margin-left: 20px;
 }
 
 .title {
-  width: 530px;
-  height: 250px;
+  width: 400px;
+  height: 150px;
   position: absolute;
-  left: 220px;
+  left: 150px;
 }
 
 .boiledEggs {
-  width: 180px;
+  width: 100px;
   position: absolute;
-  right: 40px;
+  right: 90px;
   top: 20px;
 }
 
@@ -58,7 +58,7 @@ code {
   border-radius: 20px;
   border: #f9ae0e solid 10px;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 18px;
   text-align: center;
   color: #816835;
   font-weight: 700;
@@ -66,6 +66,7 @@ code {
 
 .eggContainer img {
   pointer-events: none;
+  width: 150px;
 }
 
 .row {
@@ -83,37 +84,48 @@ code {
 }
 
 .cookBtn {
-  width: 240px;
-  height: 90px;
-  background-color: #00cb91;
-  border: none;
-  border-radius: 20px;
-}
-
-.homeBtn {
-  width: 240px;
-  height: 90px;
+  width: 95%;
+  height: 70px;
   background-color: #00cb91;
   border: none;
   border-radius: 20px;
   position: absolute;
-  bottom: 50px;
+  bottom: 28px;
 }
 
 .cookBtnImg {
   width: 140px;
 }
 
+.homeBtn {
+  width: 95%;
+  height: 70px;
+  background-color: #00cb91;
+  border: none;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 28px;
+  font-size: 40px;
+  color: #ffbf00;
+}
+
 .remainingTime {
   width: 400px;
-  height: 300px;
+  height: 170px;
   text-align: center;
   align-content: center;
-  font-size: 140px;
+  font-size: 90px;
   background-color: #ffd89a;
   border: 10px solid #f9ae0e;
   color: #816835;
   border-radius: 40px;
+}
+
+.boilingEggs {
+  width: 230px;
+  position: absolute;
+  bottom: 120px;
+  right: 5px;
 }
 
 .remainingTime p {
@@ -122,20 +134,16 @@ code {
 
 .selectedEgg p {
   font-size: 30px;
-  margin-top: 10px;
 }
 
 .selectedEgg {
   text-align: center;
-  width: 400px;
-  height: 130px;
-  background-color: #ffd89a;
-  border: solid #f9ae0e 10px;
+  height: 50px;
   color: #816835;
-  border-radius: 40px;
   margin: 40px;
   text-align: center;
   align-content: center;
+  font-weight: 600;
 }
 
 .selected {
@@ -149,26 +157,232 @@ img::selection {
 
 .eggs {
   position: relative;
+  margin-top: 40px;
 }
 
 .eggSelector {
   position: absolute;
-  width: 100px;
-  transform: translate(370px, -100px);
+  width: 70px;
+  transform: translate(270px, -70px);
 }
 
 .first {
-  transform: translate(330px, 320px);
+  transform: translate(220px, 170px);
 }
 
 .second {
-  transform: translate(730px, 320px);
+  transform: translate(520px, 170px);
 }
 
 .third {
-  transform: translate(330px, 740px);
+  transform: translate(220px, 410px);
 }
 
 .fourth {
-  transform: translate(730px, 740px);
+  transform: translate(520px, 410px);
+}
+
+.firstToSecond {
+  animation: firstToSecond 0.3s ease-in-out;
+}
+
+.firstToThird {
+  animation: firstToThird 0.3s ease-in-out;
+}
+
+.firstToFourth {
+  animation: firstToFourth 0.3s ease-in-out;
+}
+
+.secondToFirst {
+  animation: secondToFirst 0.3s ease-in-out;
+}
+
+.secondToThird {
+  animation: secondToThird 0.3s ease-in-out;
+}
+
+.secondToFourth {
+  animation: secondToFourth 0.3s ease-in-out;
+}
+
+.thirdToFirst {
+  animation: thirdToFirst 0.3s ease-in-out;
+}
+
+.thirdToSecond {
+  animation: thirdToSecond 0.3s ease-in-out;
+}
+
+.thirdToFourth {
+  animation: thirdToFourth 0.3s ease-in-out;
+}
+
+.fourthToFirst {
+  animation: fourthToFirst 0.3s ease-in-out;
+}
+
+.fourthToSecond {
+  animation: fourthToSecond 0.3s ease-in-out;
+}
+
+.fourthToThird {
+  animation: fourthToThird 0.3s ease-in-out;
+}
+
+.startToFirst {
+  animation: startToFirst 0.3s ease-in-out;
+}
+.startToSecond {
+  animation: startToSecond 0.3s ease-in-out;
+}
+.startToThird {
+  animation: startToThird 0.3s ease-in-out;
+}
+.startToFourth {
+  animation: startToFourth 0.3s ease-in-out;
+}
+
+@keyframes firstToSecond {
+  0% {
+    transform: translate(220px, 170px);
+  }
+  100% {
+    transform: translate(520px, 170px);
+  }
+}
+
+@keyframes firstToThird {
+  0% {
+    transform: translate(220px, 170px);
+  }
+  100% {
+    transform: translate(220px, 410px);
+  }
+}
+
+@keyframes firstToFourth {
+  0% {
+    transform: translate(220px, 170px);
+  }
+  100% {
+    transform: translate(520px, 410px);
+  }
+}
+
+@keyframes secondToFirst {
+  0% {
+    transform: translate(520px, 170px);
+  }
+  100% {
+    transform: translate(220px, 170px);
+  }
+}
+
+@keyframes secondToThird {
+  0% {
+    transform: translate(520px, 170px);
+  }
+  100% {
+    transform: translate(220px, 410px);
+  }
+}
+
+@keyframes secondToFourth {
+  0% {
+    transform: translate(520px, 170px);
+  }
+  100% {
+    transform: translate(520px, 410px);
+  }
+}
+
+@keyframes thirdToFirst {
+  0% {
+    transform: translate(220px, 410px);
+  }
+  100% {
+    transform: translate(220px, 170px);
+  }
+}
+
+@keyframes thirdToSecond {
+  0% {
+    transform: translate(220px, 410px);
+  }
+  100% {
+    transform: translate(520px, 170px);
+  }
+}
+
+@keyframes thirdToFourth {
+  0% {
+    transform: translate(220px, 410px);
+  }
+  100% {
+    transform: translate(520px, 410px);
+  }
+}
+
+@keyframes fourthToFirst {
+  0% {
+    transform: translate(520px, 410px);
+  }
+  100% {
+    transform: translate(220px, 170px);
+  }
+}
+
+@keyframes fourthToSecond {
+  0% {
+    transform: translate(520px, 410px);
+  }
+  100% {
+    transform: translate(520px, 170px);
+  }
+}
+
+@keyframes fourthToThird {
+  0% {
+    transform: translate(520px, 410px);
+  }
+  100% {
+    transform: translate(220px, 410px);
+  }
+}
+
+@keyframes startToFirst {
+  0% {
+    transform: translate(270px, -70px);
+  }
+  100% {
+    transform: translate(220px, 170px);
+  }
+}
+
+@keyframes startToSecond {
+  0% {
+    transform: translate(270px, -70px);
+  }
+  100% {
+    transform: translate(520px, 170px);
+  }
+}
+
+@keyframes startToThird {
+  0% {
+    transform: translate(270px, -70px);
+  }
+  100% {
+    transform: translate(220px, 410px);
+  }
+}
+
+@keyframes startToFourth {
+  0% {
+    transform: translate(270px, -70px);
+  }
+  100% {
+    transform: translate(520px, 410px);
+  }
 }

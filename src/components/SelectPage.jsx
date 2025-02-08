@@ -8,12 +8,12 @@ import cook from "../assets/imgs/cook.png";
 import friedEggs from "../assets/imgs/friedEggs.png";
 
 export default function SelectPage({ onGoToTimerPage }) {
-  const [selected, setSelectedEgg] = useState(null);
+  const [selected, setSelected] = useState(null);
   const selector = useRef();
 
   const handleSelectedChange = (value) => {
     let selectorClassName = "";
-    setSelectedEgg(value);
+    let animationClass = "";
 
     switch (value) {
       case 0:
@@ -33,10 +33,57 @@ export default function SelectPage({ onGoToTimerPage }) {
         break;
     }
 
-    let refsClassList = selector.current.classList;
+    switch (selected) {
+      case 0:
+        if (value === 1) animationClass = "firstToSecond";
+        if (value === 2) animationClass = "firstToThird";
+        if (value === 3) animationClass = "firstToFourth";
+        break;
+      case 1:
+        if (value === 0) animationClass = "secondToFirst";
+        if (value === 2) animationClass = "secondToThird";
+        if (value === 3) animationClass = "secondToFourth";
+        break;
+      case 2:
+        if (value === 0) animationClass = "thirdToFirst";
+        if (value === 1) animationClass = "thirdToSecond";
+        if (value === 3) animationClass = "thirdToFourth";
+        break;
+      case 3:
+        if (value === 0) animationClass = "fourthToFirst";
+        if (value === 1) animationClass = "fourthToSecond";
+        if (value === 2) animationClass = "fourthToThird";
+        break;
+      default:
+        if (value === 0) animationClass = "startToFirst";
+        if (value === 1) animationClass = "startToSecond";
+        if (value === 2) animationClass = "startToThird";
+        if (value === 3) animationClass = "startToFourth";
+        break;
+    }
+    setSelected(value);
 
-    refsClassList.remove(refsClassList[1]);
-    refsClassList.add(selectorClassName);
+    if (selector.current.classList.length > 1) {
+      setTimeout(() => {
+        const classList = selector.current.classList;
+        const classesToRemove = Array.from(classList).filter(
+          (className) => className !== "eggSelector"
+        );
+
+        classesToRemove.forEach((e) => {
+          selector.current.classList.remove(e);
+          console.log("Removing class: " + e);
+        });
+
+        selector.current.classList.add("eggSelector");
+        selector.current.classList.add(selectorClassName);
+        selector.current.classList.add(animationClass);
+      }, 300);
+    } else {
+      selector.current.classList.add("eggSelector");
+      selector.current.classList.add(selectorClassName);
+      selector.current.classList.add(animationClass);
+    }
   };
 
   return (
@@ -80,21 +127,21 @@ export default function SelectPage({ onGoToTimerPage }) {
             <p>Hard-boiled</p>
           </Col>
         </Row>
-        <Row>
-          <Col className="alignCenter">
-            <button
-              className="cookBtn"
-              onClick={() => {
-                if (selected != null) {
-                  onGoToTimerPage(selected);
-                }
-              }}
-            >
-              <img src={cook} alt="cook" className="cookBtnImg" />
-            </button>
-          </Col>
-        </Row>
       </div>
+      <Row>
+        <Col className="alignCenter">
+          <button
+            className="cookBtn"
+            onClick={() => {
+              if (selected != null) {
+                onGoToTimerPage(selected);
+              }
+            }}
+          >
+            <img src={cook} alt="cook" className="cookBtnImg" />
+          </button>
+        </Col>
+      </Row>
     </div>
   );
 }

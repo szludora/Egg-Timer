@@ -3,9 +3,9 @@ import path from "path";
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
-    width: 850,
-    height: 1200,
-    resizable: true,
+    width: 610,
+    height: 850,
+    resizable: false,
     webPreferences: {
       nodeIntegration: true,
     },

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-bootstrap";
+import boilingEggs from "../assets/imgs/boilingEggs.gif";
 
 export default function TimerPage({ onGoSelectPage, selectedEgg }) {
   const getEggName = () => {
@@ -68,21 +69,24 @@ export default function TimerPage({ onGoSelectPage, selectedEgg }) {
   }, []);
 
   return (
-    <div className="pageBg">
-      <Row>
-        <Col className="alignCenter">
-          <div className="selectedEgg">
-            <p>{getEggName()}</p>
-          </div>
-        </Col>
-      </Row>
-      <Row>
-        <Col className="alignCenter">
-          <div className="remainingTime">
-            <p>{formatTimeToMMSS(remainingTimeInSeconds)}</p>
-          </div>
-        </Col>
-      </Row>
+    <>
+      <div className="pageBg">
+        <img src={boilingEggs} className="boilingEggs" alt="boilingEggs" />
+        <Row>
+          <Col className="alignCenter">
+            <div className="selectedEgg">
+              <p>{getEggName()}</p>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="alignCenter">
+            <div className="remainingTime">
+              <p>{formatTimeToMMSS(remainingTimeInSeconds)}</p>
+            </div>
+          </Col>
+        </Row>
+      </div>
       <Row>
         <Col className="alignCenter">
           <button className="homeBtn" onClick={onGoSelectPage}>
@@ -90,6 +94,6 @@ export default function TimerPage({ onGoSelectPage, selectedEgg }) {
           </button>
         </Col>
       </Row>
-    </div>
+    </>
   );
 }
