@@ -1,0 +1,144 @@
+:root,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff4b5;
+}
+
+.pageBg {
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: #fff4b5;
+}
+
+.chicken {
+  width: 240px;
+  margin-left: 20px;
+}
+
+.title {
+  width: 530px;
+  height: 250px;
+  position: absolute;
+  left: 220px;
+}
+
+.boiledEggs {
+  width: 180px;
+  position: absolute;
+  right: 40px;
+  top: 20px;
+}
+
+.eggContainer {
+  background-color: #ffd89a;
+  margin: 30px;
+  border-radius: 20px;
+  border: #f9ae0e solid 10px;
+  cursor: pointer;
+}
+
+.eggContainer img {
+  pointer-events: none;
+}
+
+.row {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.header {
+  margin-bottom: 20px !important;
+}
+
+.alignCenter {
+  display: flex;
+  justify-content: center;
+}
+
+.cookBtn {
+  width: 240px;
+  height: 90px;
+  background-color: #00cb91;
+  border: none;
+  border-radius: 20px;
+}
+
+.homeBtn {
+  width: 240px;
+  height: 90px;
+  background-color: #00cb91;
+  border: none;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 50px;
+}
+
+.cookBtnImg {
+  width: 140px;
+}
+
+.remainingTime {
+  width: 400px;
+  height: 300px;
+  text-align: center;
+  align-content: center;
+  font-size: 140px;
+  background-color: #ffd89a;
+  border: 10px solid #f9ae0e;
+  color: #816835;
+  border-radius: 40px;
+}
+
+.remainingTime p {
+  margin-bottom: 20px;
+}
+
+.selectedEgg p {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.selectedEgg {
+  text-align: center;
+  width: 400px;
+  height: 130px;
+  background-color: #ffd89a;
+  border: solid #f9ae0e 10px;
+  color: #816835;
+  border-radius: 40px;
+  margin: 40px;
+  text-align: center;
+  align-content: center;
+}
+
+.selected {
+  background-color: #d2ff89;
+  border: #9dca54 solid 10px;
+}
+
+img::selection {
+  background-color: transparent;
+}
